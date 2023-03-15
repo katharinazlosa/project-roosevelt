@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles/styles.css">
+    <title>Vježba 1503</title>
+</head>
+<body>
+    <header class="header">
+        <span class="header__logo"><a href="/"><img src="./../assets/img/logo.png" alt="logo"></a></span>
+        <span class="header__action">Portfolio</span>
+    </header>
+    <nav class="nav">
+        <a href="./../pages/omeni.html">O meni</a>
+        <a href="./../pages/mojprofil.html">Moj profil</a>
+        <div class="dropdown">
+            <button class="dropdown__btn">Vježbe &#11167</button>
+            <div class="dropdown__content">
+                <a href="./../pages/vjezba1303.html">Vježba 1303</a>
+                <a href="./../pages/vjezba1503.html">Vježba 1503</a>
+            </div>
+        </div>
+    </nav>
+    <section class="layout">
+        <div class="content">
+            <div class="content__left">
+                <button class="btn">&#8594</button>
+            </div>
+            <div class="content__right">
+                <div class="content__right__header">
+                    <h3>Basic details</h3>
+                    <hr>
+                </div>
+                <div class="content__right__form">
+                    <form class="form">
+                        <label for="fname">First Name</label><br>
+                        <div class="input--icons">
+                            <input type="text" id="fname" name="fname" placeholder="John"><br>
+                            <p>✔️</p>
+                        </div>
+                        <label for="lname">Last Name</label><br>
+                        <div class="input--icons">
+                            <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+                            <p>✔️</p>
+                        </div>
+                        <label for="email">E-mail</label><br>
+                        <div class="input--icons">
+                            <input type="text" id="email" name="email" placeholder="name@email.js"><br>
+                            <p>✔️</p>
+                        </div>
+                    </form>
+                    <form class="form">
+                        <p>Choose your favorite Web language:</p>
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label><br>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label>
+                    </form> 
+                    <form class="form">
+                        <label for="cars">Choose a car:</label>
+                        <select id="cars" name="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="fiat">Fiat</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </form>
+                    <form class="form">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> I have a bike</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> I have a car</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> I have a boat</label><br><br>
+                    </form>
+                </div>
+                <div class="content__right__footer">
+                    <button class="btn">Reset all</button>
+                    <button class="btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>KZlo</p>
+        <p>2023</p>
+    </footer>
+</body>
+</html>

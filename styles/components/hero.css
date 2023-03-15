@@ -1,0 +1,181 @@
+.hero {
+  background-image: url(./../assets/img/hero-img.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__content {
+  text-align: center;
+}
+
+.hero__content__title {
+  color: #f6f6f6;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 0;
+  font-size: 3rem;
+  padding: 3rem;
+}
+
+.hero__content__btn {
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: 1px solid grey;
+  border-radius: 1.5rem;
+  background-color: #DEFBC9;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+}
+
+.hero__content__btn:hover {
+  background-color: #ddd;
+}
+
+.hero__content__icons {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.hero .modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f6f6f6;
+  width: 70vw;
+  height: 40vh;
+  z-index: 2;
+  position: fixed;
+  padding: 1.5rem;
+  border: 1px solid #DEFBC9;
+  border-radius: 15px;
+}
+
+@media (max-width: 70em) {
+  .hero .modal {
+    width: 70vw;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 40em) {
+  .hero .modal {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+.hero .modal.hidden {
+  display: none;
+}
+
+.hero .modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero .modal__header img {
+  width: 10rem;
+}
+
+.hero .modal__header .btn__close {
+  -webkit-transform: translate(-10px, -20px);
+          transform: translate(-10px, -20px);
+  padding: 0.5rem 0.7rem;
+  background-color: white;
+  border: 0.0625rem solid green;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.hero .modal__section {
+  font-size: 1rem;
+  color: black;
+}
+
+.hero .modal__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+}
+
+@media (max-width: 70em) {
+  .hero .modal__footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 25em) {
+  .hero .modal__footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.hero .modal__footer input {
+  padding: 0 1rem;
+  border: 1px solid green;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
+@media (max-width: 40em) {
+  .hero .modal__footer input {
+    font-size: 1rem;
+  }
+}
+
+.hero .modal__footer .btn {
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0.125rem solid green;
+  border-radius: 3rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media (max-width: 70em) {
+  .hero .modal__footer .btn {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .hero .modal__footer .btn {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+/*# sourceMappingURL=hero.css.map */

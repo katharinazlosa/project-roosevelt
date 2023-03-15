@@ -1,0 +1,141 @@
+//colors
+$primary-nav-color: #f6f6f6;
+$secondary-nav-color: #DEFBC9;
+$hero-color: green;
+$main-text-color: black;
+
+//fonts
+$nav-font-size: 2.5rem;
+$text-font-size: 1rem;
+
+//box-shadow
+$box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+.hero {
+    background-image: url(./../assets/img/hero-img.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        text-align: center;
+
+        &__title {
+            color: $primary-nav-color;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            margin: 0;
+            font-size: 3rem;
+            padding: 3rem;
+        }
+    
+        &__btn {
+            color: $main-text-color;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            border: 1px solid grey;
+            border-radius: 1.5rem;
+            background-color: $secondary-nav-color;
+            box-shadow: $box-shadow;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+        &__icons {
+            padding: 2rem;
+            cursor: pointer;
+        }
+    }
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $primary-nav-color;
+        width: 70vw;
+        height: 40vh;
+        z-index: 2;
+        position: fixed;
+        padding: 1.5rem;
+        border: 1px solid $secondary-nav-color;
+        border-radius: 15px;
+        @media (max-width: 70em) {
+            width: 70vw;
+            height: 60vh;
+        }
+        @media (max-width: 40em) {
+            width: 70vw;
+            height: 70vh;
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img {
+                width: 10rem;
+            }
+            .btn__close {
+                transform: translate(-10px, -20px);
+                padding: 0.5rem 0.7rem;
+                background-color: white;
+                border: 0.0625rem solid $hero-color;
+                border-radius: 50%; 
+                cursor: pointer;
+            }
+        }
+
+        &__section {
+            font-size: 1rem;
+            color: $main-text-color;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1rem;
+            @media (max-width: 70em) {
+                flex-wrap: wrap;
+            }
+            @media (max-width: 25em) {
+                flex-wrap: wrap;
+            }
+            input {
+                padding: 0 1rem;
+                border: 1px solid $hero-color;
+                border-radius: 5px;
+                font-size: 2rem;
+                @media (max-width: 40em) {
+                    font-size: 1rem;
+                }
+            }
+            .btn {
+                color: $hero-color;
+                font-size: 1rem;
+                font-weight: bold;
+                border: 0.125rem solid $hero-color;
+                border-radius: 3rem;
+                padding: 1rem 3rem;
+                cursor: pointer;    
+                box-shadow: $box-shadow;
+                @media (max-width: 70em) {
+                    margin-top: 0.5rem;
+                }
+                
+                @media (max-width: 40em) {
+                    padding: 0.5rem;
+                    margin-top: 0.5rem;
+                }
+            
+            }
+        }
+    }
+}
