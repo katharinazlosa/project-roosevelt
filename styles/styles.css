@@ -36,8 +36,8 @@ body {
 }
 .nav a {
   color: black;
-  text-decoration: none;
   font-size: 1rem;
+  text-decoration: none;
   padding: 1rem;
 }
 .nav .dropdown {
@@ -45,20 +45,23 @@ body {
   display: inline-block;
   padding: 0.9rem 0;
 }
+.nav .dropdown:hover .dropdown__content {
+  display: block;
+}
 .nav .dropdown__btn {
   background-color: #DEFBC9;
   color: black;
+  font-size: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1rem;
 }
 .nav .dropdown__content {
   display: none;
   position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background-color: #DEFBC9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   top: 100%;
 }
@@ -71,12 +74,8 @@ body {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown__content {
-  display: block;
-}
-
-.hero__img {
-  background-image: url(./img/hero-img.jpg);
+.hero {
+  background-image: url(./../assets/img/hero-img.jpg);
   background-position: center;
   background-size: cover;
   height: 75vh;
@@ -84,17 +83,17 @@ body {
   justify-content: center;
   align-items: center;
 }
-.hero__img .hero__text {
+.hero__content {
   text-align: center;
 }
-.hero__img .hero__text__title {
+.hero__content__title {
   color: #f6f6f6;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   margin: 0;
   font-size: 3rem;
   padding: 3rem;
 }
-.hero__img .hero__text__btn {
+.hero__content__btn {
   color: black;
   font-size: 1.2rem;
   padding: 1rem 2rem;
@@ -104,50 +103,50 @@ body {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   cursor: pointer;
 }
-.hero__img .hero__text__btn:hover {
+.hero__content__btn:hover {
   background-color: #ddd;
 }
-.hero__img .hero__text__icons {
+.hero__content__icons {
   padding: 2rem;
   cursor: pointer;
 }
-.hero__img .hero__modal {
+.hero .modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #f6f6f6;
-  width: 70%;
-  height: 40%;
+  width: 70vw;
+  height: 40vh;
   z-index: 2;
   position: fixed;
   padding: 1.5rem;
   border: 1px solid #DEFBC9;
   border-radius: 15px;
 }
-@media (max-width: 1100px) {
-  .hero__img .hero__modal {
-    width: 70%;
-    height: 60%;
+@media (max-width: 70em) {
+  .hero .modal {
+    width: 70vw;
+    height: 60vh;
   }
 }
-@media (max-width: 600px) {
-  .hero__img .hero__modal {
-    width: 70%;
-    height: 80%;
+@media (max-width: 40em) {
+  .hero .modal {
+    width: 70vw;
+    height: 70vh;
   }
 }
-.hero__img .hero__modal.hidden {
+.hero .modal.hidden {
   display: none;
 }
-.hero__img .hero__modal__header {
+.hero .modal__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.hero__img .hero__modal__header img {
+.hero .modal__header img {
   width: 10rem;
 }
-.hero__img .hero__modal__header .btn__close {
+.hero .modal__header .btn__close {
   transform: translate(-10px, -20px);
   padding: 0.5rem 0.7rem;
   background-color: white;
@@ -155,37 +154,37 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-.hero__img .hero__modal__section {
+.hero .modal__section {
   font-size: 1rem;
   color: black;
 }
-.hero__img .hero__modal__footer {
+.hero .modal__footer {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
 }
-@media (max-width: 1100px) {
-  .hero__img .hero__modal__footer {
+@media (max-width: 70em) {
+  .hero .modal__footer {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 400px) {
-  .hero__img .hero__modal__footer {
+@media (max-width: 25em) {
+  .hero .modal__footer {
     flex-wrap: wrap;
   }
 }
-.hero__img .hero__modal__footer input {
+.hero .modal__footer input {
   padding: 0 1rem;
   border: 1px solid green;
   border-radius: 5px;
   font-size: 2rem;
 }
-@media (max-width: 600px) {
-  .hero__img .hero__modal__footer input {
+@media (max-width: 40em) {
+  .hero .modal__footer input {
     font-size: 1rem;
   }
 }
-.hero__img .hero__modal__footer .footer__btn {
+.hero .modal__footer .btn {
   color: green;
   font-size: 1rem;
   font-weight: bold;
@@ -193,15 +192,15 @@ body {
   border-radius: 3rem;
   padding: 1rem 3rem;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.375rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-@media (max-width: 1100px) {
-  .hero__img .hero__modal__footer .footer__btn {
+@media (max-width: 70em) {
+  .hero .modal__footer .btn {
     margin-top: 0.5rem;
   }
 }
-@media (max-width: 600px) {
-  .hero__img .hero__modal__footer .footer__btn {
+@media (max-width: 40em) {
+  .hero .modal__footer .btn {
     padding: 0.5rem;
     margin-top: 0.5rem;
   }

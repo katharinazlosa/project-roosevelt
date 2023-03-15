@@ -3,10 +3,15 @@
 //colors
 $primary-nav-color: #f6f6f6;
 $secondary-nav-color: #DEFBC9;
+$hero-color: green;
+$main-text-color: black;
 
 //fonts
 $nav-font-size: 2.5rem;
-  
+$text-font-size: 1rem;
+
+//box-shadow
+$box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 body {
     margin: 0;
@@ -20,7 +25,7 @@ body {
 }
 
 .header {
-    background-color: #f6f6f6;
+    background-color: $primary-nav-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +39,7 @@ body {
     }
 
     &__action {
-        color: black;
+        color: $main-text-color;
         font-size: $nav-font-size;
         padding: 1rem;
     }
@@ -46,9 +51,9 @@ body {
     justify-content: center;
 
     a {
-        color: black;
+        color: $main-text-color;
+        font-size: $text-font-size;
         text-decoration: none;
-        font-size: 1rem;
         padding: 1rem;
     }
     .dropdown {
@@ -62,23 +67,23 @@ body {
         }
         &__btn {
             background-color: $secondary-nav-color;
-            color: black;
+            color: $main-text-color;
+            font-size: $text-font-size;
             border: none;
             outline: none;
             cursor: pointer;
-            font-size: 1rem;
         }
         &__content {
             display: none;
             position: absolute;
+            box-shadow: $box-shadow;
             background-color: $secondary-nav-color;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             top: 100%;
             
             a {
-                color: black;
+                color: $main-text-color;
                 text-decoration: none;
                 display: block;
     
@@ -90,9 +95,8 @@ body {
     }
 }
 
-.hero__img {
-    
-    background-image: url(./img/hero-img.jpg);
+.hero {
+    background-image: url(./../assets/img/hero-img.jpg);
     background-position: center;
     background-size: cover;
     height: 75vh;
@@ -100,7 +104,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    .hero__text {
+    &__content {
         text-align: center;
 
         &__title {
@@ -112,13 +116,13 @@ body {
         }
     
         &__btn {
-            color: black;
+            color: $main-text-color;
             font-size: 1.2rem;
             padding: 1rem 2rem;
             border: 1px solid grey;
             border-radius: 1.5rem;
             background-color: $secondary-nav-color;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            box-shadow: $box-shadow;
             cursor: pointer;
 
             &:hover {
@@ -130,25 +134,25 @@ body {
             cursor: pointer;
         }
     }
-    .hero__modal {
+    .modal {
         display: flex;
         flex-direction: column;
         justify-content: center;
         background-color: $primary-nav-color;
-        width: 70%;
-        height: 40%;
+        width: 70vw;
+        height: 40vh;
         z-index: 2;
         position: fixed;
         padding: 1.5rem;
         border: 1px solid $secondary-nav-color;
         border-radius: 15px;
-        @media (max-width: 1100px) {
-            width: 70%;
-            height: 60%;
+        @media (max-width: 70em) {
+            width: 70vw;
+            height: 60vh;
         }
-        @media (max-width: 600px) {
-            width: 70%;
-            height: 80%;
+        @media (max-width: 40em) {
+            width: 70vw;
+            height: 70vh;
         }
 
         &.hidden {
@@ -166,7 +170,7 @@ body {
                 transform: translate(-10px, -20px);
                 padding: 0.5rem 0.7rem;
                 background-color: white;
-                border: 0.0625rem solid green;
+                border: 0.0625rem solid $hero-color;
                 border-radius: 50%; 
                 cursor: pointer;
             }
@@ -174,42 +178,42 @@ body {
 
         &__section {
             font-size: 1rem;
-            color: black;
+            color: $main-text-color;
         }
 
         &__footer {
             display: flex;
             justify-content: space-evenly;
             padding: 1rem;
-            @media (max-width: 1100px) {
+            @media (max-width: 70em) {
                 flex-wrap: wrap;
             }
-            @media (max-width: 400px) {
+            @media (max-width: 25em) {
                 flex-wrap: wrap;
             }
             input {
                 padding: 0 1rem;
-                border: 1px solid green;
+                border: 1px solid $hero-color;
                 border-radius: 5px;
                 font-size: 2rem;
-                @media (max-width: 600px) {
+                @media (max-width: 40em) {
                     font-size: 1rem;
                 }
             }
-            .footer__btn {
-                color: green;
+            .btn {
+                color: $hero-color;
                 font-size: 1rem;
                 font-weight: bold;
-                border: 0.125rem solid green;
+                border: 0.125rem solid $hero-color;
                 border-radius: 3rem;
                 padding: 1rem 3rem;
                 cursor: pointer;    
-                box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.375rem 1.5rem;
-                @media (max-width: 1100px) {
+                box-shadow: $box-shadow;
+                @media (max-width: 70em) {
                     margin-top: 0.5rem;
                 }
                 
-                @media (max-width: 600px) {
+                @media (max-width: 40em) {
                     padding: 0.5rem;
                     margin-top: 0.5rem;
                 }
