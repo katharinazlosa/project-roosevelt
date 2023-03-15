@@ -9,31 +9,49 @@
 </head>
 <body>
     <header class="header">
-        <span class="header__logo">Logo</span>
+        <span class="header__logo"><a href="/"><img src="./styles/img/logo.png" alt="logo"></a></span>
         <span class="header__action">Portfolio</span>
     </header>
-    <main>
-        <nav class="nav">
-            <a href="/">O meni</a>
-            <a href="/pages/about-me">Moj profil</a>
-            <div class="dropdown">
-                <button class="dropdown__btn">Vježbe &#11167</button>
-                <div class="dropdown__content">
-                    <a href="/pages/vjezba-1303">Vježba 1303</a>
-                </div>
-            </div>
-        </nav>
-    </main>
-    <div class="hero__img">
-        <div class="hero__text">
-            <h1 class="hero__text__title">lalalala</h1>
-            <button class="hero__text__btn">Više...</button>
-            <div class="hero__text__icons">
-                <img src="https://img.icons8.com/material/24/null/facebook-new.png"/>
-                <img src="https://img.icons8.com/material/24/null/instagram-new--v1.png"/>
-                <img src="https://img.icons8.com/material/24/null/pinterest--v1.png"/>
+    <nav class="nav">
+        <a href="./pages/omeni.html">O meni</a>
+        <a href="./pages/mojprofil.html">Moj profil</a>
+        <div class="dropdown">
+            <button class="dropdown__btn">Vježbe &#11167</button>
+            <div class="dropdown__content">
+                <a href="./pages/vjezba1303.html">Vježba 1303</a>
             </div>
         </div>
-    </div>
+    </nav>
+    <section class="hero__img">
+        <div class="hero__text">
+            <h1 class="hero__text__title">Katharina Zlosa</h1>
+            <button class="hero__text__btn">Kontakt</button>
+            <div class="hero__text__icons">
+                <img src="https://img.icons8.com/material/24/null/facebook-new.png" alt="facebook icon"/>
+                <img src="https://img.icons8.com/material/24/null/instagram-new--v1.png" alt="instagram icon"/>
+                <img src="https://img.icons8.com/material/24/null/pinterest--v1.png" alt="pinterest icon"/>
+            </div>
+        </div>
+        <div class="hero__modal hidden">
+            <div class="hero__modal__header">
+                <img src="./styles/img/logo.png" alt="logo image"/>
+                <button class="btn__close"> ⨉ </button>
+              </div>
+              <div class="hero__modal__section">
+                <h2>Molim vas, ostavite e-mail adresu i kontaktirat ću vas u najkraćem mogućem roku.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique et egestas quis ipsum. Et sollicitudin ac orci phasellus. Mattis enim ut tellus elementum. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae. </p>
+              </div>
+              <div class="hero__modal__footer">
+                <input type="email" id="email" placeholder="email@js.com"/>
+                <button class="footer__btn">Submit</button>
+              </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>neki copyright</p>
+        <p>2023</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Lato&family=Lora&family=Open+Sans:wght@300&display=swap');
 
 //colors
-$primary-nav-color: #DEFBC9;
+$primary-nav-color: #f6f6f6;
+$secondary-nav-color: #DEFBC9;
 
 //fonts
-$nav-font-size: 4rem;
+$nav-font-size: 2.5rem;
+  
 
 body {
     margin: 0;
@@ -12,33 +14,34 @@ body {
 
 * {
     box-sizing: border-box;
-    font-family: 'Prata', serif;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Golos Text', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lora', serif;
 }
 
 .header {
-    background-color: black;
+    background-color: #f6f6f6;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
     &__logo {
-        color: white;
-        font-size: $nav-font-size;
-        padding: 1rem;
+        padding: 0 1rem;
         cursor: pointer;
+        img {
+            height: 5rem;
+        }
     }
 
     &__action {
-        color: white;
-        font-family: 'Quicksand', sans-serif;
+        color: black;
         font-size: $nav-font-size;
-        padding: 1.5rem;
+        padding: 1rem;
     }
 }
 
 .nav {
-    background-color: $primary-nav-color;
+    background-color: $secondary-nav-color;
     display: flex;
     justify-content: center;
 
@@ -53,7 +56,7 @@ body {
         display: inline-block;
         padding: 0.9rem 0;
         &__btn {
-            background-color: $primary-nav-color;
+            background-color: $secondary-nav-color;
             color: black;
             border: none;
             outline: none;
@@ -64,7 +67,7 @@ body {
         &__content {
             display: none;
             position: absolute;
-            background-color: $primary-nav-color;
+            background-color: $secondary-nav-color;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
@@ -72,10 +75,8 @@ body {
             
             a {
                 color: black;
-                // padding: 12px 16px;
                 text-decoration: none;
                 display: block;
-                
     
                 &:hover {
                     background-color: #ddd;
@@ -85,27 +86,29 @@ body {
     }
 }
 
+//mogu li ovaj dio nekako ubaciti gore u scss?
 .dropdown:hover .dropdown__content {
     display: block;
 }
 .hero__img {
-    background-image: url(https://images.unsplash.com/photo-1508502726440-477c94bc369e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    
+    background-image: url(./img/hero-img.jpg);
+    background-position: center;
     background-size: cover;
-    height: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .hero__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
+        text-align: center;
 
         &__title {
+            color: $primary-nav-color;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             margin: 0;
-            font-size: 5rem;
-            padding: 2rem;
+            font-size: 3rem;
+            padding: 3rem;
         }
     
         &__btn {
@@ -114,13 +117,110 @@ body {
             padding: 1rem 2rem;
             border: 1px solid grey;
             border-radius: 1.5rem;
-            background-color: $primary-nav-color;
+            background-color: $secondary-nav-color;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             cursor: pointer;
+
+            &:hover {
+                background-color: #ddd;
+            }
         }
         &__icons {
             padding: 2rem;
             cursor: pointer;
         }
     }
+    .hero__modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $primary-nav-color;
+        width: 70%;
+        height: 40%;
+        z-index: 2;
+        position: fixed;
+        padding: 1.5rem;
+        border: 1px solid $secondary-nav-color;
+        border-radius: 15px;
+        @media (max-width: 1100px) {
+            width: 70%;
+            height: 60%;
+        }
+        @media (max-width: 600px) {
+            width: 70%;
+            height: 80%;
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img {
+                width: 10rem;
+            }
+            .btn__close {
+                transform: translate(-10px, -20px);
+                padding: 0.5rem 0.7rem;
+                background-color: white;
+                border: 0.0625rem solid green;
+                border-radius: 50%; 
+                cursor: pointer;
+            }
+        }
+
+        &__section {
+            font-size: 1rem;
+            color: black;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1rem;
+            @media (max-width: 1100px) {
+                flex-wrap: wrap;
+            }
+            @media (max-width: 400px) {
+                flex-wrap: wrap;
+            }
+            input {
+                padding: 0 1rem;
+                border: 1px solid green;
+                border-radius: 5px;
+                font-size: 2rem;
+                @media (max-width: 600px) {
+                    font-size: 1rem;
+                }
+            }
+            .footer__btn {
+                color: green;
+                font-size: 1rem;
+                font-weight: bold;
+                border: 0.125rem solid green;
+                border-radius: 3rem;
+                padding: 1rem 3rem;
+                cursor: pointer;    
+                box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.375rem 1.5rem;
+                @media (max-width: 1100px) {
+                    margin-top: 0.5rem;
+                }
+                
+                @media (max-width: 600px) {
+                    padding: 0.5rem;
+                    margin-top: 0.5rem;
+                }
+            
+            }
+        }
+    }
+}
+.footer {
+    background-color: $primary-nav-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
 }
