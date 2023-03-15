@@ -55,6 +55,11 @@ body {
         position: relative;
         display: inline-block;
         padding: 0.9rem 0;
+        &:hover {
+            .dropdown__content {
+                display: block;
+            }
+        }
         &__btn {
             background-color: $secondary-nav-color;
             color: black;
@@ -62,7 +67,6 @@ body {
             outline: none;
             cursor: pointer;
             font-size: 1rem;
-            
         }
         &__content {
             display: none;
@@ -86,10 +90,6 @@ body {
     }
 }
 
-//mogu li ovaj dio nekako ubaciti gore u scss?
-.dropdown:hover .dropdown__content {
-    display: block;
-}
 .hero__img {
     
     background-image: url(./img/hero-img.jpg);
