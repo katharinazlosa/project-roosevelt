@@ -10,7 +10,7 @@ $main-text-color: black;
 $nav-font-size: 2.5rem;
 $text-font-size: 1rem;
 
-//box-shadow
+$border: 1px solid $hero-color;
 $box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 body {
@@ -29,13 +29,16 @@ body {
     padding: 3rem;
     &__content {
         width: 50vw;
+        height: 70vh;
         padding: 3rem;
         background-color: $secondary-nav-color;
+        box-shadow: $box-shadow;
     }
     &__img img {
         width: 50vw;
         height: 70vh;
         object-fit: cover;
+        box-shadow: $box-shadow;
     }
 }
 
@@ -62,7 +65,7 @@ body {
         cursor: pointer;
         .btn {
             background-color: $secondary-nav-color;
-            border: 1px solid $hero-color;
+            border: $border;
             box-shadow: $box-shadow;
             border-radius: 2rem;
             padding: 0 0.5rem;
@@ -80,12 +83,12 @@ body {
                 select {
                     background-color: white;
                     border: none;
-                    border-bottom: 1px solid $hero-color;
+                    border-bottom: $border;
                 }
             }
             .input--icons {
                 display: flex;
-                border-bottom: 1px solid $hero-color;
+                border-bottom: $border;
             }
             label {
                 color: grey;
@@ -111,8 +114,8 @@ body {
             justify-content: space-evenly;
             .btn {
                 background-color: $secondary-nav-color;
-                border: 1px solid $hero-color;
-                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;;
+                border: $border;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
                 border-radius: 2rem;
                 padding: 0.6rem 1.5rem;
                 cursor: pointer;
