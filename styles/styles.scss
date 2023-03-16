@@ -123,6 +123,72 @@ body {
         }
     }
 }
+.component {
+    background-color: $primary-nav-color;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    .card {
+        background-color: white;
+        display: flex;
+        width: 60vw;
+        padding: 2rem;
+        border-radius: 2rem;
+        &__col {
+            padding: 1rem;
+        }
+        &__img {
+            height: 3rem;
+            margin: 1rem;
+        }
+        .vote-btn {
+            margin-top: 2rem;
+            height: 6rem;
+            width: 6rem;
+            background-color: white;
+            border: 1px solid #BDB8B8;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.tag {
+    font-size: 0.8rem;
+    &--grey {
+        background-color: lightgrey;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    &--red {
+        background-color: #F3CCCC;
+        color: red;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    .card-links {
+        border: $border;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+        width: 20vw;
+        &__subtitle {
+            font-size: 0.7rem;
+            display:flex;
+            justify-content: space-around;
+            img {
+                height: 1rem;
+            }
+        }
+    }
+}
+
+
+
+
 
 //components
 @import "./components/nav.scss";
