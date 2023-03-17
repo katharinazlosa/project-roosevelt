@@ -1,0 +1,165 @@
+
+.component {
+    background-color: $primary-nav-color;
+    @include flex-start;
+    padding: 2rem;
+    .card {
+        background-color: $bck-white-color;
+        display: flex;
+        width: 60vw;
+        padding: 2rem;
+        border-radius: 2rem;
+        &__col {
+            padding: 1rem;
+        }
+        &__img {
+            height: 3rem;
+            margin: 1rem;
+        }
+        .vote-btn {
+            margin-top: 2rem;
+            height: 6rem;
+            width: 6rem;
+            background-color: $bck-white-color;
+            border: 1px solid #BDB8B8;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.tag {
+    font-size: 0.8rem;
+    &--grey {
+        background-color: $hover-btn-color;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    &--red {
+        background-color: #F3CCCC;
+        color: red;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+}
+
+.product-grid {
+    @include flex-center;
+    padding: 2rem;
+    .card-links {
+        border: 1px solid grey;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+        width: 15vw;
+        padding: 1rem;
+
+        &__img {
+            position: relative;
+            @include flex-start;
+            
+            &__float {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0.5rem;
+            }
+        }
+        &__subtitle {
+            font-size: 0.7rem;
+            @include flex-between;
+            img {
+                height: 2rem;
+                padding-top: 1rem;
+            }
+            p {
+                color: $hover-btn-color;
+                font-size: $text-font-size;
+            }
+        }
+        .title {
+            margin: 0;
+            font-size: $text-font-size;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+        }
+        &__price {
+            color: #5395F1;
+            padding: 1rem 0;
+            @include flex-between;
+            .price--cur {
+                color: $hover-btn-color;
+            }
+        }
+        &__buttons {
+            @include flex-between;
+            .button--orange {
+                background-color: #F1B353;
+                border: none;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                img {
+                    height: 2rem;
+                    width: 2.5rem;
+                }
+            }
+            .button--grey {
+                background-color: $bck-white-color;
+                border: 1px dotted $hover-btn-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.landing-page {
+    background-color: #e6e6e6;
+    padding: 0 3rem;
+    .page-header {
+        @include flex-between;
+        align-items: center;
+        &__logo {
+            cursor: pointer;
+        }
+        &__nav a{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $main-text-color;
+            padding-right: 1rem;
+        }
+    }
+    .page-section {
+        background: url(./../assets/img/amg-vjezba1603.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
+        padding: 4rem 1rem;
+        position: relative;
+        
+        h1 {
+            margin: 0;
+            font-size: 6rem;
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-family: 'Open Sans', sans-serif;
+        }
+        &__icons {
+            cursor:pointer;
+        }
+        &__pagination {
+            display: flex;
+            flex-direction: column;
+            .dot {
+                position: absolute;
+                right: 0;
+                font-size: 8rem;
+            }
+        }
+    }
+    .page-footer {
+        @include flex-between;
+        padding: 1.5rem 2rem;
+        text-transform: uppercase;
+        img {
+            height: 2rem;
+        }
+    }
+}

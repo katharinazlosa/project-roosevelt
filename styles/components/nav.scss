@@ -1,21 +1,6 @@
-//colors
-$primary-nav-color: #f6f6f6;
-$secondary-nav-color: #DEFBC9;
-$hero-color: green;
-$main-text-color: black;
-
-//fonts
-$nav-font-size: 2.5rem;
-$text-font-size: 1rem;
-
-//box-shadow
-$box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
 .nav {
     background-color: $secondary-nav-color;
-    display: flex;
-    justify-content: center;
-
+    @include flex-center;
     a {
         color: $main-text-color;
         font-size: $text-font-size;
@@ -44,7 +29,7 @@ $box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30
             position: absolute;
             box-shadow: $box-shadow;
             background-color: $secondary-nav-color;
-            min-width: 160px;
+            min-width: 16rem;
             z-index: 1;
             top: 100%;
             

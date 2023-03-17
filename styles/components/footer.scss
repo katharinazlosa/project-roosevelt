@@ -1,6 +1,5 @@
 .footer {
     background-color: $primary-nav-color;
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
     padding: 1rem;
 }

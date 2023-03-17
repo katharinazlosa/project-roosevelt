@@ -1,22 +1,8 @@
-//colors
-$primary-nav-color: #f6f6f6;
-$secondary-nav-color: #DEFBC9;
-$hero-color: green;
-$main-text-color: black;
-
-//fonts
-$nav-font-size: 2.5rem;
-$text-font-size: 1rem;
-
-//box-shadow
-$box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
 
 .header {
     background-color: $primary-nav-color;
-    display: flex;
+    @include flex-between;
     flex-direction: row;
-    justify-content: space-between;
 
     &__logo {
         padding: 0 1rem;

@@ -1,0 +1,27 @@
+.section {
+    display: flex;
+    padding: 3rem;
+    @media (max-width: 62.5em) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__content {
+        background-color: $secondary-nav-color;
+        box-shadow: $box-shadow;
+        width: 50vw;
+        height: 70vh;
+        padding: 3rem;
+        @media (max-width: 62.5em) {
+           
+        }
+    }
+    &__img img {
+        object-fit: cover;
+        box-shadow: $box-shadow;
+        width: 50vw;
+        height: 70vh;
+        @media (max-width: 62.5em) {
+            
+        }
+    }
+}

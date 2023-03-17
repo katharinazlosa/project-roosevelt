@@ -1,0 +1,78 @@
+.layout {
+    background-color: $primary-nav-color;
+    @include flex-center;
+    padding: 3rem;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: $box-shadow;
+    width: 60vw;
+    &__left {
+        background-color: $secondary-nav-color;
+        width: 15vw;
+        @include flex-center;
+        align-items: flex-end;
+        padding: 2rem;
+        cursor: pointer;
+        .btn {
+            background-color: $secondary-nav-color;
+            border: $border;
+            box-shadow: $box-shadow;
+            border-radius: 2rem;
+            padding: 0 0.5rem;
+            cursor: pointer;
+        }
+    }
+
+    &__right {
+        &__header {
+            padding: 1rem;
+        }
+        &__form {
+            form {
+                padding: 1rem;
+                select {
+                    background-color: $bck-white-color;
+                    border: none;
+                    border-bottom: $border;
+                }
+            }
+            .input--icons {
+                display: flex;
+                border-bottom: $border;
+            }
+            label {
+                color: $hover-btn-color;
+                font-size: 0.7rem;
+                padding: 1rem 0;
+            }
+            input {
+                border: none;
+                outline: none;
+                padding: 1rem 1rem;
+                &[type=text] {
+                    width: 30vw;
+                }
+                &:focus {
+                    border-color: $hero-color;
+                    outline: 1px dotted $hero-color;
+                }
+            }
+        }
+        &__footer {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-evenly;
+            .btn {
+                background-color: $secondary-nav-color;
+                border: $border;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+                border-radius: 2rem;
+                padding: 0.6rem 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
