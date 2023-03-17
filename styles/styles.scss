@@ -170,25 +170,131 @@ body {
 .product-grid {
     display: flex;
     justify-content: center;
+    padding: 2rem;
     .card-links {
-        border: $border;
+        border: 1px solid grey;
         box-shadow: $box-shadow;
         border-radius: 0.5rem;
-        width: 20vw;
+        width: 15vw;
+        padding: 1rem;
+
+        &__img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            
+            &__float {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0.5rem;
+            }
+        }
         &__subtitle {
             font-size: 0.7rem;
             display:flex;
-            justify-content: space-around;
+            justify-content: space-between;
             img {
-                height: 1rem;
+                height: 2rem;
+                padding-top: 1rem;
+            }
+            p {
+                color: lightgrey;
+                font-size: 1rem;
+            }
+        }
+        .title {
+            margin: 0;
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+        }
+        &__price {
+            color: #5395F1;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            .price--cur {
+                color: grey;
+            }
+        }
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            .button--orange {
+                background-color: #F1B353;
+                border: none;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                img {
+                    height: 2rem;
+                    width: 2.5rem;
+                }
+            }
+            .button--grey {
+                background-color: white;
+                border: 1px dotted lightgrey;
+                cursor: pointer;
             }
         }
     }
 }
 
-
-
-
+.landing-page {
+    background-color: #e6e6e6;
+    padding: 0 3rem;
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__logo {
+            cursor: pointer;
+        }
+        &__nav a{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            padding-right: 1rem;
+        }
+    }
+    .page-section {
+        background: url(./../assets/img/amg-vjezba1603.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
+        padding: 4rem 1rem;
+        position: relative;
+        
+        h1 {
+            margin: 0;
+            font-size: 6rem;
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-family: 'Open Sans', sans-serif;
+        }
+        &__icons {
+            cursor:pointer;
+        }
+        &__pagination {
+            display: flex;
+            flex-direction: column;
+            .dot {
+                position: absolute;
+                right: 0;
+                font-size: 8rem;
+            }
+        }
+    }
+    .page-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+        text-transform: uppercase;
+        img {
+            height: 2rem;
+        }
+    }
+}
 
 //components
 @import "./components/nav.scss";
