@@ -1,0 +1,39 @@
+//colors
+$primary-nav-color: #f6f6f6;
+$secondary-nav-color: #defbc9;
+$hero-color: green;
+$main-text-color: black;
+$bck-white-color: white;
+$hover-btn-color: #ddd;
+
+//fonts
+$nav-font-size: 2.5rem;
+$text-font-size: 1rem;
+
+$border: 1px solid $hero-color;
+$box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Golos Text", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Lora", serif;
+}

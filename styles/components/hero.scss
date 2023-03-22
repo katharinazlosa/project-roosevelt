@@ -1,123 +1,122 @@
-
 .hero {
-    background-image: url(./../assets/img/hero-img.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 75vh;
+  background-image: url(./../assets/img/hero-img.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 75vh;
+  @include flex-center;
+
+  &__content {
+    text-align: center;
+
+    &__title {
+      color: $primary-nav-color;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      margin: 0;
+      font-size: 3rem;
+      padding: 3rem;
+    }
+
+    &__btn {
+      color: $main-text-color;
+      background-color: $secondary-nav-color;
+      box-shadow: $box-shadow;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      border: 1px solid $hover-btn-color;
+      border-radius: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hover-btn-color;
+      }
+    }
+    &__icons {
+      padding: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .modal {
     @include flex-center;
-
-    &__content {
-        text-align: center;
-
-        &__title {
-            color: $primary-nav-color;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-            margin: 0;
-            font-size: 3rem;
-            padding: 3rem;
-        }
-    
-        &__btn {
-            color: $main-text-color;
-            background-color: $secondary-nav-color;
-            box-shadow: $box-shadow;
-            font-size: 1.2rem;
-            padding: 1rem 2rem;
-            border: 1px solid $hover-btn-color;
-            border-radius: 1.5rem;
-            cursor: pointer;
-
-            &:hover {
-                background-color: $hover-btn-color;
-            }
-        }
-        &__icons {
-            padding: 2rem;
-            cursor: pointer;
-        }
+    flex-direction: column;
+    background-color: $primary-nav-color;
+    border: 1px solid $secondary-nav-color;
+    width: 70vw;
+    height: 40vh;
+    z-index: 2;
+    position: fixed;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    @media (max-width: 70em) {
+      width: 70vw;
+      height: 60vh;
     }
-    .modal {
-        @include flex-center;
-        flex-direction: column;
-        background-color: $primary-nav-color;
-        border: 1px solid $secondary-nav-color;
-        width: 70vw;
-        height: 40vh;
-        z-index: 2;
-        position: fixed;
-        padding: 1.5rem;
-        border-radius: 1.5rem;
-        @media (max-width: 70em) {
-            width: 70vw;
-            height: 60vh;
-        }
+    @media (max-width: 40em) {
+      width: 70vw;
+      height: 70vh;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &__header {
+      @include flex-between;
+      img {
+        width: 10rem;
+      }
+      .btn__close {
+        transform: translate(-10px, -20px);
+        padding: 0.5rem 0.7rem;
+        background-color: $bck-white-color;
+        border: $border;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+
+    &__section {
+      font-size: 1rem;
+      color: $main-text-color;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 1rem;
+      @media (max-width: 70em) {
+        flex-wrap: wrap;
+      }
+      @media (max-width: 25em) {
+        flex-wrap: wrap;
+      }
+      input {
+        padding: 0 1rem;
+        border: $border;
+        border-radius: 5px;
+        font-size: 2rem;
         @media (max-width: 40em) {
-            width: 70vw;
-            height: 70vh;
+          font-size: 1rem;
+        }
+      }
+      .btn {
+        color: $hero-color;
+        font-size: $text-font-size;
+        font-weight: bold;
+        border: $border;
+        border-radius: 3rem;
+        padding: 1rem 3rem;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+        @media (max-width: 70em) {
+          margin-top: 0.5rem;
         }
 
-        &.hidden {
-            display: none;
+        @media (max-width: 40em) {
+          padding: 0.5rem;
+          margin-top: 0.5rem;
         }
-
-        &__header {
-            @include flex-between;
-            img {
-                width: 10rem;
-            }
-            .btn__close {
-                transform: translate(-10px, -20px);
-                padding: 0.5rem 0.7rem;
-                background-color: $bck-white-color;
-                border: $border;
-                border-radius: 50%; 
-                cursor: pointer;
-            }
-        }
-
-        &__section {
-            font-size: 1rem;
-            color: $main-text-color;
-        }
-
-        &__footer {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 1rem;
-            @media (max-width: 70em) {
-                flex-wrap: wrap;
-            }
-            @media (max-width: 25em) {
-                flex-wrap: wrap;
-            }
-            input {
-                padding: 0 1rem;
-                border: $border;
-                border-radius: 5px;
-                font-size: 2rem;
-                @media (max-width: 40em) {
-                    font-size: 1rem;
-                }
-            }
-            .btn {
-                color: $hero-color;
-                font-size: $text-font-size;
-                font-weight: bold;
-                border: $border;
-                border-radius: 3rem;
-                padding: 1rem 3rem;
-                cursor: pointer;    
-                box-shadow: $box-shadow;
-                @media (max-width: 70em) {
-                    margin-top: 0.5rem;
-                }
-                
-                @media (max-width: 40em) {
-                    padding: 0.5rem;
-                    margin-top: 0.5rem;
-                }
-            
-            }
-        }
+      }
     }
+  }
 }
